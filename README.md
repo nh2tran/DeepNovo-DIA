@@ -19,6 +19,8 @@ We have provided a pre-trained folder in the above repository together with thre
 
 The result is a tab-delimited text file with extension `.deepnovo_denovo`. Each row shows the predicted sequence, confidence score, and other information for a feature provided in the input feature_file.
 
+Note that the feature_file can be labeled or unlabeled. If labeled, the target sequence of each feature is provided in column `seq`, and we can run the next step to calculate accuracy. If not labeled, the column `seq` is simply empty.
+
 **Step 2:** Test de novo sequencing results on labeled features:
 
     deepnovo_main --test --target_file <target_file> --predicted_file <predicted_file>
@@ -28,4 +30,4 @@ For example:
     --target_file plasma/testing_plasma.feature.csv
     --predicted_file plasma/testing_plasma.feature.csv.deepnovo_denovo
     
-As this testing feature_file is labeled, it includes the target sequence for each feature (column `seq`). Thus, DeepNovo can compare the predicted sequence to the target sequence and calculate the accuracy. The result includes 3 files. The file with extension `.accuracy` shows the comparison result for each feature. The other 2 files can be ignored.
+As this testing feature_file is labeled, it includes the target sequence for each feature. Thus, DeepNovo can compare the predicted sequence to the target sequence and calculate the accuracy. The result includes 3 files. The file with extension `.accuracy` shows the comparison result for each feature. The other 2 files can be ignored. The accuracy summary is also printed out to the terminal.
