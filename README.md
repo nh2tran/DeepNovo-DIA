@@ -7,7 +7,7 @@
 
 ### How to use DeepNovo?
 
-We provide the Linux pre-compiled file `deepnovo_main`. We have packed the cpu-version of TensorFlow and other required Python libraries, so the software can run on any Linux machine. The source code is available to the reviewers upon request, and will be released to the public after the publication. If you have any problems running our software, please contact hieutran1985@gmail.com, we'll response instantly.
+We provide the Linux pre-compiled file `deepnovo_main`. We have packed the cpu-version of TensorFlow and other required Python libraries, so the software can run on any Linux machine. The source code is available to the reviewers upon request, and will be released to the public after the publication. If you have any problems running our software, please contact hieutran1985@gmail.com, we will response instantly.
 
 **Step 1:** Run de novo sequencing with a pre-trained model:
 
