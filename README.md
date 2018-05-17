@@ -4,7 +4,9 @@
 
 - Publication: under review.
 - Data and pre-trained model on MassIVE repository: 
+
 ftp://massive.ucsd.edu/MSV000082368/other/
+
 (backup link: https://drive.google.com/open?id=0By9IxqHK5MdWalJLSGliWW1RY2c)
 
 ### How to use DeepNovo?
