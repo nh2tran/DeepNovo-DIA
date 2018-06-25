@@ -4,6 +4,7 @@
 
 - Publication: under review.
 - Data and pre-trained model on MassIVE repository: ftp://massive.ucsd.edu/MSV000082368/other/
+- Knapsack matrix: https://drive.google.com/open?id=1um832lwCDpBptkeeCFhzWYuK4tgRwdm_
 
 (backup link: https://drive.google.com/open?id=0By9IxqHK5MdWalJLSGliWW1RY2c)
 
