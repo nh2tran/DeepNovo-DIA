@@ -4,7 +4,7 @@
 
 - Publication: under review.
 - Data and pre-trained model on MassIVE repository: ftp://massive.ucsd.edu/MSV000082368/other/
-- The software is too big for GitHub (311 Mb). Please download from the authors' website:
+- The software is too big for GitHub (311 Mb). Please download from the authors' website: https://cs.uwaterloo.ca/~mli/index.html
 
 (backup link: https://drive.google.com/open?id=1T07-YHvJdmSE1emx8U8YmYrtq0Z1mEbN)
 
