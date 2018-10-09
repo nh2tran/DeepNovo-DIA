@@ -10,8 +10,7 @@ We have packed the cpu-version of TensorFlow and other required Python libraries
 This version requires two input files: a spectrum mgf file and a feature csv file.
 The knapsack matrix (available from the above link) needs to be in the same folder as `deepnovo_main`. 
 - We also provide a Windows executable file, which can be downloaded from the authors' website: https://cs.uwaterloo.ca/~mli/index.html
-This version includes feature detection and pre-processing modules to run directly on `.raw` files (from Thermo instruments).
-This version also has a graphic user interface for convenience.
+This version includes feature detection and pre-processing modules to run directly on `.raw` files (e.g., from Thermo instruments).
 
 (backup link: https://drive.google.com/open?id=1T07-YHvJdmSE1emx8U8YmYrtq0Z1mEbN)
 
@@ -36,8 +35,6 @@ We have provided a pre-trained folder in the above repository together with thre
 Note that the feature_file can be labeled or unlabeled. 
 If labeled, the target sequence of each feature is provided in column `seq`, and we can run the next step to calculate accuracy. 
 If not labeled, the column `seq` is simply empty.
-
-
 
 The result is a tab-delimited text file with extension `.deepnovo_denovo`. 
 Each row shows the predicted sequence, confidence score, and other information for a feature provided in the input feature_file.
