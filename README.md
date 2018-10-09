@@ -39,6 +39,8 @@ If not labeled, the column `seq` is simply empty.
 The result is a tab-delimited text file with extension `.deepnovo_denovo`. 
 Each row shows the predicted sequence, confidence score, and other information for a feature provided in the input feature_file.
 
+More details of the input and output information can be found in the documentation file and the supplementary of our publication.
+
 **Step 2:** Test de novo sequencing results on labeled features:
 
     deepnovo_main --test --target_file <target_file> --predicted_file <predicted_file>
