@@ -16,13 +16,13 @@ This version includes feature detection and pre-processing modules to run direct
 
 If you have any problems running our software, please contact hieutran1985@gmail.com.
 
-### How to use DeepNovo?
+## How to use DeepNovo?
 
 For Windows version, please refer to the documentation file.
 
 For Linux version, please see the following instructions.
 
-#### Step 1: Run de novo sequencing with a pre-trained model:
+### Step 1: Run de novo sequencing with a pre-trained model:
 
     deepnovo_main --search_denovo --train_dir <training_folder> --denovo_spectrum <spectrum_file> --denovo_feature <feature_file>
 
@@ -74,7 +74,7 @@ Each row includes the following columns:
 - scan_list_middle: list of DIA spectra used for de novo sequencing
 - predicted_score_max: same as predicted_score, not relevant
 
-**Step 2:** Test de novo sequencing results on labeled features:
+### Step 2: Test de novo sequencing results on labeled features:
 
     deepnovo_main --test --target_file <target_file> --predicted_file <predicted_file>
 
@@ -88,7 +88,7 @@ Thus, DeepNovo can compare the predicted sequence to the target sequence and cal
 The result includes 3 files. The file with extension `.accuracy` shows the comparison result for each feature. 
 The other 2 files can be ignored. The accuracy summary is also printed out to the terminal.
 
-**Step 3:** Train a new model:
+### Step 3: Train a new model:
 
     deepnovo_main --train --train_dir <training_folder> --train_spectrum <train_spectrum_file> --train_feature <train_feature_file> --valid_spectrum <valid_spectrum_file> --valid_feature <valid_feature_file>
 
