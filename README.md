@@ -22,7 +22,7 @@ For Windows version, please refer to the documentation file.
 
 For Linux version, please see the following instructions.
 
-**Step 1:** Run de novo sequencing with a pre-trained model:
+#### Step 1: Run de novo sequencing with a pre-trained model:
 
     deepnovo_main --search_denovo --train_dir <training_folder> --denovo_spectrum <spectrum_file> --denovo_feature <feature_file>
 
