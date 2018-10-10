@@ -32,14 +32,44 @@ We have provided a pre-trained folder in the above repository together with thre
     --denovo_spectrum plasma/testing_plasma.spectrum.mgf
     --denovo_feature plasma/testing_plasma.feature.csv
 
-Note that the feature_file can be labeled or unlabeled. 
-If labeled, the target sequence of each feature is provided in column `seq`, and we can run the next step to calculate accuracy. 
-If not labeled, the column `seq` is simply empty.
+The mgf file contains all MS/MS spectra in the dataset.
+Each spectrum starts with the line "BEGIN IONS", followed by 5 header lines:
+- "TITLE": not relevant
+- "PEPMASS": the center of DIA m/z window of the spectrum
+- "CHARGE": not relevant
+- "SCANS": the MS/MS scan id; "F1:3" means scan number 3 of fraction 1
+- "RTINSECONDS": the retention time of the spectrum
+
+The csv file contains all precursor features detected from LC/MS map.
+The file’s columns include the following information:
+- "spec_group": the feature id; "F1:6427" means feature number 6427 of fraction 1
+- "m/z": the mass-to-charge ratio
+- "z": the charge
+- "rt_mean": the mean of the retention time range
+- "seq": the column is empty when running de novo sequencing. 
+In training/testing mode, it contains the target peptide sequence.
+- "scans": list of all MS/MS spectra collected for the feature so that 
+they are within the feature’s retention time range and their DIA m/z windows must cover the feature’s m/z.
+The spectra’s ids are separated by semicolon. 
+The spectra’s ids can be used to locate the spectra in the mgf file.
+- "profile": intensity values over the retention time range. 
+The values are pairs of "time:intensity" and are separated by semicolon. 
+The time points align to the time of spectra in the column "scans".
+- "feature_area": precursor feature area estimated by the feature detection.
 
 The result is a tab-delimited text file with extension `.deepnovo_denovo`. 
-Each row shows the predicted sequence, confidence score, and other information for a feature provided in the input feature_file.
-
-More details of the input and output information can be found in the documentation file and the supplementary of our publication.
+Each row includes the following columns:
+- feature_id
+- feature_area
+-	predicted_sequence
+- predicted_score
+- predicted_position_score: positional score for each amino acid in predicted_sequence
+- precursor_mz
+- precursor_charge
+- protein_access_id: not relevant
+- scan_list_original: list of scan ids of DIA spectra associated with this feature
+- scan_list_middle: list of DIA spectra used for de novo sequencing
+- predicted_score_max: same as predicted_score, not relevant
 
 **Step 2:** Test de novo sequencing results on labeled features:
 
