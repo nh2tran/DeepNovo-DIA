@@ -83,7 +83,7 @@ For example:
     --target_file plasma/testing_plasma.feature.csv
     --predicted_file plasma/testing_plasma.feature.csv.deepnovo_denovo
     
-As this testing feature_file is labeled, it includes the target sequence for each feature. 
+As the testing feature file is labeled, it includes the target sequence for each feature. 
 Thus, DeepNovo can compare the predicted sequence to the target sequence and calculate the accuracy. 
 The result includes 3 files. The file with extension `.accuracy` shows the comparison result for each feature. 
 The other 2 files can be ignored. The accuracy summary is also printed out to the terminal.
