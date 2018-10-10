@@ -26,7 +26,7 @@ For Linux version, please see the following instructions.
 
     deepnovo_main --search_denovo --train_dir <training_folder> --denovo_spectrum <spectrum_file> --denovo_feature <feature_file>
 
-We have provided a pre-trained folder in the above repository together with three testing datasets. For example:
+We have provided a pre-trained folder in the above repositories together with three testing datasets. For example:
 
     --train_dir train.urine_pain.ioncnn.lstm
     --denovo_spectrum plasma/testing_plasma.spectrum.mgf
@@ -39,6 +39,8 @@ Each spectrum starts with the line "BEGIN IONS", followed by 5 header lines:
 - "CHARGE": not relevant
 - "SCANS": the MS/MS scan id; "F1:3" means scan number 3 of fraction 1
 - "RTINSECONDS": the retention time of the spectrum
+After those headers lines are the list of pairs of (m/z, intensity) of fragment ions in the spectrum.
+Finally, the spectrum ends with the line "END IONS"
 
 The csv file contains all precursor features detected from LC/MS map.
 The file’s columns include the following information:
