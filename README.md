@@ -37,7 +37,7 @@ Each spectrum starts with the line "BEGIN IONS", followed by 5 header lines:
 - "TITLE": not relevant
 - "PEPMASS": the center of DIA m/z window of the spectrum
 - "CHARGE": not relevant
-- "SCANS": the MS/MS scan id; "F1:3" means scan number 3 of fraction 1
+- "SCANS": the MS/MS scan id. For example, "F1:3" means scan number 3 of fraction 1.
 - "RTINSECONDS": the retention time of the spectrum
 
 After those headers lines comes the list of pairs of (m/z, intensity) of fragment ions in the spectrum.
@@ -45,7 +45,7 @@ Finally, the spectrum ends with the line "END IONS"
 
 The csv file contains all precursor features detected from LC/MS map.
 Each feature includes the following columns:
-- "spec_group": the feature id. "F1:6427" means feature number 6427 of fraction 1.
+- "spec_group": the feature id. For example, "F1:6427" means feature number 6427 of fraction 1.
 - "m/z": the mass-to-charge ratio
 - "z": the charge
 - "rt_mean": the mean of the retention time range
