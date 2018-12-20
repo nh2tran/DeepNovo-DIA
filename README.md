@@ -1,8 +1,6 @@
 # DeepNovo-DIA
 
-## Deep learning enables de novo peptide sequencing from DIA.
-
-- Publication: under review.
+- Publication: Deep learning enables de novo peptide sequencing from DIA mass spectrometry. Nature Methods, 2018. (https://www.nature.com/articles/s41592-018-0260-3)
 - Data and pre-trained model on MassIVE repository: ftp://massive.ucsd.edu/MSV000082368/other/
 - Knapsack matrix: https://drive.google.com/open?id=1aHDGphyzTo2hMMXlwkLCRVDp9JB9ph34
 - We provide a Linux pre-compiled file `deepnovo_main`, which can be used to train a model, to perform de novo sequencing and to test the accuracy.
@@ -13,8 +11,6 @@ The knapsack matrix (available from the above link) needs to be in the same fold
 This version includes feature detection and pre-processing modules to run directly on `.raw` files (e.g., from Thermo instruments).
 
 (backup link: https://drive.google.com/open?id=1T07-YHvJdmSE1emx8U8YmYrtq0Z1mEbN)
-
-If you have any problems running our software, please contact hieutran1985@gmail.com.
 
 ## How to use DeepNovo?
 
