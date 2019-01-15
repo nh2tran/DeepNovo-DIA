@@ -4,11 +4,12 @@
 - Data and pre-trained model on MassIVE repository: ftp://massive.ucsd.edu/MSV000082368/other/
 - Knapsack matrix: https://drive.google.com/open?id=1aHDGphyzTo2hMMXlwkLCRVDp9JB9ph34
 - We provide a Linux pre-compiled file `deepnovo_main`, which can be used to train a model, to perform de novo sequencing and to test the accuracy.
-We have packed the cpu-version of TensorFlow and other required Python libraries, so the software can run on any Linux machine.
-This version requires two input files: a spectrum mgf file and a feature csv file.
-The knapsack matrix (available from the above link) needs to be in the same folder as `deepnovo_main`. 
+We have packed the TensorFlow CPU version 1.12, Python 2.7, and other libraries, so the software can run on any Linux machine.
+This version requires two input files: a spectrum mgf file and a precursor feature csv file (see details below).
 - We also provide a Windows executable file, which can be downloaded from the authors' website: https://cs.uwaterloo.ca/~mli/index.html
-This version includes feature detection and pre-processing modules to run directly on `.raw` files (e.g., from Thermo instruments).
+This version includes precursor feature detection and pre-processing modules to run directly on `.raw` files (e.g., from Thermo instruments).
+- In the long term, we mainly focus on developing the Linux version and de novo sequencing.
+We do not work on precursor feature detection, other third-party softwares can be used for that purpose.
 
 (backup link: https://drive.google.com/open?id=1T07-YHvJdmSE1emx8U8YmYrtq0Z1mEbN)
 
@@ -16,13 +17,20 @@ This version includes feature detection and pre-processing modules to run direct
 
 For Windows version, please refer to the documentation file.
 
-For Linux version, please see the following instructions.
+For Linux version, please read the following instructions.
+
+The knapsack matrix needs to be in the same folder as `deepnovo_main`.
+It can be downloaded from the above link.
+Otherwise, DeepNovo will automatically build the matrix, but this process may take some time.
+
+The paths to the model folder and training/testing data can be specified as instructed below.
 
 ### Step 1: Run de novo sequencing with a pre-trained model:
 
     deepnovo_main --search_denovo --train_dir <training_folder> --denovo_spectrum <spectrum_file> --denovo_feature <feature_file>
 
-We have provided a pre-trained folder in the above repositories together with three testing datasets. For example:
+We have provided a pre-trained folder in the above repositories together with three testing datasets. 
+The following example dataset will take approximately 20 minutes:
 
     --train_dir train.urine_pain.ioncnn.lstm
     --denovo_spectrum plasma/testing_plasma.spectrum.mgf
