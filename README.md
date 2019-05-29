@@ -1,5 +1,12 @@
 # DeepNovo-DIA
 
+## Latest update
+
+- Source code released.
+- From now on, we use a feature-based framework to unify DDA and DIA data analysis. The input data includes a pair of 1 spectrum mgf file and 1 precursor feature csv file. For DDA, 1 feature is associated with 1 spectrum. For DIA, 1 feature is associated with multiple spectra. Detailed formats can be found below.
+ 
+## General information
+
 - Publication: Deep learning enables de novo peptide sequencing from DIA mass spectrometry. Nature Methods, 2018. (https://www.nature.com/articles/s41592-018-0260-3)
 - Data and pre-trained model on MassIVE repository: ftp://massive.ucsd.edu/MSV000082368/other/
 - Knapsack matrix: https://drive.google.com/open?id=1aHDGphyzTo2hMMXlwkLCRVDp9JB9ph34
