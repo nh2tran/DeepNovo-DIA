@@ -9,7 +9,7 @@
 
 - Publication: Deep learning enables de novo peptide sequencing from DIA mass spectrometry. Nature Methods, 2018. (https://www.nature.com/articles/s41592-018-0260-3)
 - Data and pre-trained model on MassIVE repository: ftp://massive.ucsd.edu/MSV000082368/other/
-- Knapsack matrix: https://drive.google.com/open?id=1aHDGphyzTo2hMMXlwkLCRVDp9JB9ph34
+- Backup google drive link: https://drive.google.com/open?id=1T07-YHvJdmSE1emx8U8YmYrtq0Z1mEbN
 - We provide a Linux pre-compiled file `deepnovo_main`, which can be used to train a model, to perform de novo sequencing and to test the accuracy.
 We have packed the TensorFlow CPU version 1.12, Python 2.7, and other libraries, so the software can run on any Linux machine.
 This version requires two input files: a spectrum mgf file and a precursor feature csv file (see details below).
@@ -17,8 +17,6 @@ This version requires two input files: a spectrum mgf file and a precursor featu
 This version includes precursor feature detection and pre-processing modules to run directly on `.raw` files (e.g., from Thermo instruments).
 - In the long term, we mainly focus on developing the Linux version and de novo sequencing.
 We do not work on precursor feature detection, other third-party softwares can be used for that purpose.
-
-(backup link: https://drive.google.com/open?id=1T07-YHvJdmSE1emx8U8YmYrtq0Z1mEbN)
 
 ## How to use DeepNovo?
 
